@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Pose2Room: Understanding 3D Scenes from Human Activities.">
+  <meta name="keywords" content="Scene-Understanding, Pose Analysis">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pose2Room: Understanding 3D Scenes from Human Activities</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3W98Y6LZ1M"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3W98Y6LZ1M');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <link rel="shortcut icon" type="image/png" href="resources/icon.png"/>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://github.com/yinyunie/Total3DUnderstanding">
+            Total3D
+          </a>
+          <a class="navbar-item" href="https://github.com/yinyunie/RfDNet">
+            RfD-Net
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Pose2Room: Understanding 3D Scenes from Human Activities</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://yinyunie.github.io/">Yinyu Nie</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.3dunderstanding.org/">Angela Dai</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://mypage.cuhk.edu.cn/academics/hanxiaoguang/">Xiaoguang Han</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://niessnerlab.org/index.html">Matthias Nießner</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Technical University of Munich,</span>
+            <span class="author-block"><sup>2</sup>SRIBD, CUHKSZ</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="pending-paper"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="pending-arxiv"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="pending-video"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="pending-github"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="pending-dataset"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop height="100%">
+        <source src="resources/teaser_video.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-justified">
+        From an observed pose trajectory of a person performing daily activities in an indoor scene, we learn to estimate likely object configurations of the scene underlying these interactions, as set of object class labels and oriented 3D bounding boxes. By sampling from our probabilistic decoder, we synthesize multiple plausible object arrangements.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="sample1_input" autoplay controls muted loop height="100%">
+            <source src="resources/sample_1/input_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="sample1_pred" autoplay controls muted loop height="100%">
+            <source src="resources/sample_1/pred_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="sample1_gt" autoplay controls muted loop height="100%">
+            <source src="resources/sample_1/gt_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-steve">
+          <video poster="" id="sample1_input" autoplay controls muted loop height="100%">
+            <source src="resources/sample_2/input_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="sample1_pred" autoplay controls muted loop height="100%">
+            <source src="resources/sample_2/pred_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="sample1_gt" autoplay controls muted loop height="100%">
+            <source src="resources/sample_2/gt_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            With wearable IMU sensors, one can estimate human poses from wearable devices without requiring visual input.
+            In this work, we pose the question: Can we reason about object structure in real-world environments solely from human trajectory information?
+          </p>
+          <p>
+            Crucially, we observe that human motion and interactions tend to give strong information about the objects in a scene -- for instance a person sitting indicates the likely presence of a chair or sofa.
+            To this end, we propose P2R-Net to learn a probabilistic 3D model of the objects in a scene characterized by their class categories and oriented 3D bounding boxes, based on an input observed human trajectory in the environment.
+          </p>
+          <p>
+            P2R-Net models the probability distribution of object class as well as a deep Gaussian mixture model for object boxes, enabling sampling of multiple, diverse, likely modes of object configurations from an observed human trajectory.
+            In our experiments we demonstrate that P2R-Net can effectively learn multi-modal distributions of likely objects for human motions, and produce a variety of plausible object structures of the environment, even without any visual information.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="pending_video"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Method</h2>
+          <div class="column is-15 has-text-centered">
+            <img src="resources/overview.jpg" alt="method">
+            <p>Overview of P2R-Net.</p>
+          </div>
+          <div class="content has-text-justified">
+            <p>
+              An illustration of our approach is shown in above Figure. Given a pose trajectory with <em>N</em> frames and <em>J</em> joints, a <em>position encoder</em> decouples each skeleton frame into a relative position encoding (from its root joint as the hip centroid) and a position-agnostic pose.
+              After combining them, a <em>pose encoder</em> learns local pose features from both body joints per skeleton (spatial encoding) and their changes in consecutive frames (temporal encoding).
+              Root joints as seeds are then used to vote for the center of a nearby object that each pose is potentially interacting with.
+              A probabilistic mixture network learns likely object box distributions, from which object class labels and oriented 3D boxes can be sampled.
+            </p>
+        </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>pending_bibtex</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="pending_paper">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="pending_project" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p style="text-align:center">
+            Website source code is from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies.</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
